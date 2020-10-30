@@ -16,7 +16,7 @@ def is_sorted(items):
     print(True)
     return True
 
-
+"""Average Time complexity == O(n^2)"""
 def bubble_sort(items):
     """Sort given items by swapping adjacent items that are out of order, and
     repeating until all items are in sorted order.
@@ -29,9 +29,9 @@ def bubble_sort(items):
     n = len(items)
     # loop over the indexes in the list (-1)
     for i in range(n-1):
-        # loop over list from index 0 until len of list - 1
+        # loop over list from index 0 until len of list - current index I - 1
         for j in range(0, n-i-1):
-            # if current index is greater than the next index
+            # if current index J is greater than the next index
             if items[j] > items[j+1]:
                 # swap
                 items[j], items[j+1] = items[j+1], items[j]
@@ -40,7 +40,7 @@ def bubble_sort(items):
     if is_sorted(items) == True:
         print(items)
 
-
+"""Average Time complexity == O(n^2)"""
 def selection_sort(items):
     """Sort given items by finding minimum item, swapping it with first
     unsorted item, and repeating until all items are in sorted order.
@@ -52,9 +52,9 @@ def selection_sort(items):
 
     # loop over indexes in range length of list
     for i in range(len(items)):
-        # set the minimum index
+        # set the minimum index as current index
         min_index = i
-        # loop over indexes following min_index
+        # loop over index after min_index until the len of the list
         for j in range(i+1, len(items)):
             # if the value of the min_index is greater than
             # the value of the current index
@@ -69,7 +69,7 @@ def selection_sort(items):
         print(items)
 
 
-
+"""Average Time complexity == O(n^2)"""
 def insertion_sort(items):
     """Sort given items by taking first unsorted item, inserting it in sorted
     order in front of items, and repeating until all items are in order.
@@ -86,13 +86,13 @@ def insertion_sort(items):
 
         # set j as the current index - 1
         j = i-1
-        # loop while j > 0 and the reminder index calue is less then j's index value
+        # loop while j > 0 and the reminder index value is less then j's index value
         while j >= 0 and key < items[j]:
             # the index after j is now j
             items[j+1] = items[j]
-            # fill the space
+            #next
             j -= 1
-        # set the new j as the reminder comparision key
+        # set the new j as the reminder comparision key for the new index value
         items[j+1] = key
 
     # Check if list is sorted
