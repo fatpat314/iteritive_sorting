@@ -22,7 +22,9 @@ def insertion(list):
             j -= 1
         # set the new j as the reminder comparision key
         list[j+1] = key
+    # print(list)
+    return(list)
 
 insertion(list)
-for i in range(len(list)):
-    print(list[i])
+# for i in range(len(list)):
+#     print(list[i])
