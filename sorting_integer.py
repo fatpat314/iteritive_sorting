@@ -38,7 +38,7 @@ def counting_sort(numbers):
         result[count_list[i]] = i
         # move to the next index in the count_list for next instance comparison
         count_list[i] += 1
-    print(result)
+    # print(result)
     return result
     # FIXME: Improve this to mutate input instead of creating new output list
 
@@ -89,5 +89,6 @@ def bucket_sort(numbers, num_buckets=10):
     # FIXME: Improve this to mutate input instead of creating new output list
 
 numbers = [5,4,6,3,7,2,8,1,9,5,0]
+print("INPUT: ", numbers)
 print("COUNTING SORT: ", counting_sort(numbers))
 print("BUCKET SORT: ", bucket_sort(numbers))
